@@ -2,7 +2,6 @@
 
 <div class="post" id="post<%=Index %>">
   <div class="sidebar">
-    <div class="sidebar">
       <div class="wrapper-date">
         <div class="d-day"><%=Post.DateCreated.Day.ToString() %></div>
         <div class="d-mon"><%=Post.DateCreated.ToString("MMM") %></div>
@@ -12,13 +11,13 @@
       <a href="<%=VirtualPathUtility.ToAbsolute("~/") + "author/" + BlogEngine.Core.Utils.RemoveIllegalCharacters(Post.Author) %>.aspx"><%=Post.AuthorProfile != null ? Post.AuthorProfile.DisplayName : Post.Author %></a>
       </p>
       <br />
-      <% if (!string.IsNullOrEmpty(Post.AuthorProfile.PhotoURL)) { %>
+      <% if (Post.AuthorProfile != null && !string.IsNullOrEmpty(Post.AuthorProfile.PhotoURL))
+         { %>
       <p><img src="<%=Post.AuthorProfile.PhotoURL %>" alt="<%= !string.IsNullOrEmpty(Post.AuthorProfile.DisplayName) ? Post.AuthorProfile.DisplayName : Post.Author %>'s Avatar" /></p>
       <%} %>
       <p class="notes">
         <a rel="nofollow" href="<%=Post.RelativeLink %>#comment"><%=Post.ApprovedComments.Count %> Notes</a>
       </p>
-    </div>
   </div>
   <div class="content text">
     <h1 class ="post-title"><a href="<%=Post.RelativeLink %>" class="taggedlink"><%=Server.HtmlEncode(Post.Title) %></a></h1>
