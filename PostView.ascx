@@ -22,12 +22,15 @@
     <h1 class ="post-title"><a href="<%=Post.RelativeLink %>" class="taggedlink"><%=Server.HtmlEncode(Post.Title) %></a></h1>
     <div class="go"><asp:PlaceHolder ID="BodyContent" runat="server" /></div>
     <div class="description">
+    <% if (Post.Tags.Count > 0)
+       { %>
       <p class="tags">Tags: <%=TagLinks(" ") %></p>
+    <%} %>
       <p class="categories"><%=CategoryLinks(", ") %></p>
       <%=Rating %>
     </div>
   </div>
-  <div class="footer" style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); padding-top: 20px; padding-right: 0px; padding-bottom: 20px; padding-left: 0px; font-size: 10px; text-align: left; margin-bottom: 2.5em; background-position: initial initial; background-repeat: initial initial; ">    
+  <div class="footer">    
     <%=AdminLinks %>
 
     <% if (BlogEngine.Core.BlogSettings.Instance.ModerationType == BlogEngine.Core.BlogSettings.Moderation.Disqus)

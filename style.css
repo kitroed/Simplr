@@ -206,7 +206,6 @@ pre {
     background-attachment:initial;
     background-clip:initial;
     background-color:#FFFFFF;
-    background-image:url(http://static.tumblr.com/bwtvnaf/YIzkhqyas/input_bg.gif);
     background-origin:initial;
     background-position:50% 0;
     background-repeat:repeat no-repeat;
@@ -390,6 +389,13 @@ pre {
     list-style-position:initial;
     list-style-type:none;
     margin-right:2px;
+}
+div.footer {
+    padding-top: 20px; 
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    margin-bottom: 2.5em;
 }
 .post h2 {
     font-size:1.3em;
