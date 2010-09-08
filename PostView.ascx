@@ -28,7 +28,6 @@
     </div>
   </div>
   <div class="footer" style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); padding-top: 20px; padding-right: 0px; padding-bottom: 20px; padding-left: 0px; font-size: 10px; text-align: left; margin-bottom: 2.5em; background-position: initial initial; background-repeat: initial initial; ">    
-    <a rel="nofollow" href="<%=Post.RelativeLink %>#comment"><%=Post.ApprovedComments.Count %> <%=Resources.labels.comments %> </a>
     <%=AdminLinks %>
 
     <% if (BlogEngine.Core.BlogSettings.Instance.ModerationType == BlogEngine.Core.BlogSettings.Moderation.Disqus)
@@ -38,6 +37,7 @@
        else
        { %>
     <a rel="bookmark" href="<%=Post.PermaLink %>" title="<%=Server.HtmlEncode(Post.Title) %>">Permalink</a> |
+    <a rel="nofollow" href="<%=Post.RelativeLink %>#comment"><%=Post.ApprovedComments.Count %> <%=Resources.labels.comments %> </a>
     <%} %>
     </div>
 </div>
