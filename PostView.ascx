@@ -12,7 +12,9 @@
       <a href="<%=VirtualPathUtility.ToAbsolute("~/") + "author/" + BlogEngine.Core.Utils.RemoveIllegalCharacters(Post.Author) %>.aspx"><%=Post.AuthorProfile != null ? Post.AuthorProfile.DisplayName : Post.Author %></a>
       </p>
       <br />
-      <p><img src="<%=Post.AuthorProfile != null ? Post.AuthorProfile.PhotoURL : "" %>" alt="<%=Post.AuthorProfile != null ? Post.AuthorProfile.DisplayName : Post.Author %>'s Avatar" /></p>
+      <% if (!string.IsNullOrEmpty(Post.AuthorProfile.PhotoURL)) { %>
+      <p><img src="<%=Post.AuthorProfile.PhotoURL %>" alt="<%= !string.IsNullOrEmpty(Post.AuthorProfile.DisplayName) ? Post.AuthorProfile.DisplayName : Post.Author %>'s Avatar" /></p>
+      <%} %>
       <p class="notes">
         <a rel="nofollow" href="<%=Post.RelativeLink %>#comment"><%=Post.ApprovedComments.Count %> Notes</a>
       </p>
