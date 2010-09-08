@@ -37,6 +37,9 @@
       <blog:SearchOnSearch runat="server" MaxResults="3" Headline="You searched for" Text="Here are some results for the search term on this website" />
       <asp:ContentPlaceHolder ID="cphBody" runat="server" />
     </div>
+    <div class="footer">
+      <blog:WidgetZone ID="WidgetZone1" runat="server" ZoneName="be_WIDGET_ZONE" />
+    </div>
   </form>
   </div>
 </body>
