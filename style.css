@@ -1029,6 +1029,7 @@ div.widget {
     padding: 1.5em;
     margin-bottom: 1em;
     z-index: 1;
+    width: 40em;
     min-width: 1px;
 }
 
