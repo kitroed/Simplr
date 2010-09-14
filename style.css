@@ -147,8 +147,6 @@ pre {
     color:#555555;
     font-size:8em;
     letter-spacing:-0.1em;
-    line-height:1em;
-    margin-left:-0.06em;
     text-decoration:none;
 }
 #header p {
@@ -160,7 +158,7 @@ pre {
     padding-bottom:0.5em;
     padding-left:0;
     padding-right:0;
-    padding-top:0;
+    padding-top:0.5em;
 }
 #header #header_menu_div {
     font-size:1.5em;
